@@ -1,8 +1,8 @@
 package com.mikufans.jwt.modle.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.mikufans.jwt.modle.entity.User;
 import lombok.Data;
-import org.apache.tomcat.jni.User;
 
 import javax.persistence.Table;
 import javax.persistence.Transient;
