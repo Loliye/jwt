@@ -50,6 +50,7 @@ public class UserRealm extends AuthorizingRealm
         String account = JwtUtil.getClaim(principals.toString(), Constant.ACCOUNT);
         UserDto userDto = new UserDto();
         userDto.setAccount(account);
+
         List<RoleDto> roleDtos = roleMapper.findRoleByUser(userDto);
         for (RoleDto roleDto : roleDtos)
         {
@@ -81,7 +82,7 @@ public class UserRealm extends AuthorizingRealm
             throw new AuthenticationException("该帐号不存在(The account does not exist.)");
 
         //认证
-        if (JwtUtil.verify(sToken) && RedisUtil.exists(Constant.PREFIX_SHIRO_ACCESS_TOKEN + account))
+        if (JwtUtil.verify(sToken) && RedisUtil.exists(Constant.PREFIX_SHIRO_REFRESH_TOKEN + account))
         {
             String currentTime = RedisUtil.getObject(Constant.PREFIX_SHIRO_REFRESH_TOKEN + account).toString();
 

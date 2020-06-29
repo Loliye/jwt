@@ -40,7 +40,7 @@ public class JwtUtil
     {
         try
         {
-            String secret = getClaim(token, Constant.ACCOUNT + Base64ConvertUtil.decode(encryptJWTKey));
+            String secret = getClaim(token, Constant.ACCOUNT) + Base64ConvertUtil.decode(encryptJWTKey);
             Algorithm algorithm = Algorithm.HMAC256(secret);
             JWTVerifier verifier = JWT.require(algorithm).build();
             verifier.verify(token);
@@ -76,6 +76,7 @@ public class JwtUtil
 
     /**
      * 生成签名
+     *
      * @param account
      * @param currentTime
      * @return

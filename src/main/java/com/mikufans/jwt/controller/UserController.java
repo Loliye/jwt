@@ -52,11 +52,6 @@ public class UserController
 
     /**
      * 获取用户列表
-     *
-     * @param
-     * @return java.util.Map<java.lang.String, java.lang.Object>
-     * @author dolyw.com
-     * @date 2018/8/30 10:41
      */
     @GetMapping
     @RequiresPermissions(logical = Logical.AND, value = {"user:view"})
@@ -82,11 +77,6 @@ public class UserController
 
     /**
      * 获取在线用户(查询Redis中的RefreshToken)
-     *
-     * @param
-     * @return com.wang.model.common.ResponseBean
-     * @author dolyw.com
-     * @date 2018/9/6 9:58
      */
     @GetMapping("/online")
     @RequiresPermissions(logical = Logical.AND, value = {"user:view"})
@@ -118,11 +108,6 @@ public class UserController
 
     /**
      * 登录授权
-     *
-     * @param userDto
-     * @return com.wang.model.common.ResponseBean
-     * @author dolyw.com
-     * @date 2018/8/30 16:21
      */
     @PostMapping("/login")
     public ResponseBean login(@RequestBody UserDto userDto, HttpServletResponse httpServletResponse)
@@ -161,11 +146,6 @@ public class UserController
 
     /**
      * 测试登录
-     *
-     * @param
-     * @return com.wang.model.common.ResponseBean
-     * @author dolyw.com
-     * @date 2018/8/30 16:18
      */
     @GetMapping("/article")
     public ResponseBean article()
@@ -174,7 +154,7 @@ public class UserController
         // 登录了返回true
         if (subject.isAuthenticated())
         {
-            return new ResponseBean(HttpStatus.OK.value(), "您已经登录了(You are already logged in)", null);
+            return new ResponseBean(HttpStatus.OK.value(), "您已经登录了(You are already logged in)", userUtil.getUser());
         } else
         {
             return new ResponseBean(HttpStatus.OK.value(), "你是游客(You are guest)", null);
@@ -183,11 +163,6 @@ public class UserController
 
     /**
      * 测试登录注解(@RequiresAuthentication和subject.isAuthenticated()返回true一个性质)
-     *
-     * @param
-     * @return com.wang.model.common.ResponseBean
-     * @author dolyw.com
-     * @date 2018/8/30 16:18
      */
     @GetMapping("/article2")
     @RequiresAuthentication
@@ -198,11 +173,6 @@ public class UserController
 
     /**
      * 获取当前登录用户信息
-     *
-     * @param
-     * @return com.wang.model.common.ResponseBean
-     * @author dolyw.com
-     * @date 2019/3/15 11:51
      */
     @GetMapping("/info")
     @RequiresAuthentication
@@ -221,11 +191,6 @@ public class UserController
 
     /**
      * 获取指定用户
-     *
-     * @param id
-     * @return java.util.Map<java.lang.String, java.lang.Object>
-     * @author dolyw.com
-     * @date 2018/8/30 10:42
      */
     @GetMapping("/{id}")
     @RequiresPermissions(logical = Logical.AND, value = {"user:view"})
@@ -241,11 +206,6 @@ public class UserController
 
     /**
      * 新增用户
-     *
-     * @param userDto
-     * @return java.util.Map<java.lang.String, java.lang.Object>
-     * @author dolyw.com
-     * @date 2018/8/30 10:42
      */
     @PostMapping
     @RequiresPermissions(logical = Logical.AND, value = {"user:edit"})
@@ -277,11 +237,6 @@ public class UserController
 
     /**
      * 更新用户
-     *
-     * @param userDto
-     * @return java.util.Map<java.lang.String, java.lang.Object>
-     * @author dolyw.com
-     * @date 2018/8/30 10:42
      */
     @PutMapping
     @RequiresPermissions(logical = Logical.AND, value = {"user:edit"})

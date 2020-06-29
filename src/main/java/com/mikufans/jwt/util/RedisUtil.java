@@ -15,7 +15,7 @@ public class RedisUtil
     private static JedisPool jedisPool;
 
     @Autowired
-    public static void setJedisPool(JedisPool jedisPool)
+    public void setJedisPool(JedisPool jedisPool)
     {
         RedisUtil.jedisPool = jedisPool;
     }
@@ -173,6 +173,7 @@ public class RedisUtil
 
     /**
      * 查询过期剩余时间
+     *
      * @param key
      * @return
      */

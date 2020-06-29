@@ -20,7 +20,7 @@ public class SerializableUtil
         {
             byteArrayOutputStream = new ByteArrayOutputStream();
             objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
-            objectOutputStream.writeObject(objectOutputStream);
+            objectOutputStream.writeObject(o);
             return byteArrayOutputStream.toByteArray();
 
         } catch (IOException e)
