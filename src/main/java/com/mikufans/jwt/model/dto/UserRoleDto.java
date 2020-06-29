@@ -1,6 +1,6 @@
-package com.mikufans.jwt.modle.dto;
+package com.mikufans.jwt.model.dto;
 
-import com.mikufans.jwt.modle.entity.UserRole;
+import com.mikufans.jwt.model.entity.UserRole;
 
 import javax.persistence.Table;
 

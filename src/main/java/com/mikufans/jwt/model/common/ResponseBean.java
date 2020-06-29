@@ -1,4 +1,4 @@
-package com.mikufans.jwt.modle.common;
+package com.mikufans.jwt.model.common;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.mikufans.jwt.config.shiro.cache;
 
-import com.mikufans.jwt.modle.common.Constant;
+import com.mikufans.jwt.model.common.Constant;
 import com.mikufans.jwt.util.JwtUtil;
 import com.mikufans.jwt.util.RedisUtil;
 import com.mikufans.jwt.util.SerializableUtil;

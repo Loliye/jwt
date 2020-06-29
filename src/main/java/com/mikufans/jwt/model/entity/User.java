@@ -1,4 +1,4 @@
-package com.mikufans.jwt.modle.entity;
+package com.mikufans.jwt.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

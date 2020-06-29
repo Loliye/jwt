@@ -1,7 +1,7 @@
-package com.mikufans.jwt.modle.dto;
+package com.mikufans.jwt.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.mikufans.jwt.modle.entity.User;
+import com.mikufans.jwt.model.entity.User;
 import lombok.Data;
 
 import javax.persistence.Table;

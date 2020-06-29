@@ -1,7 +1,7 @@
 package com.mikufans.jwt.mapper;
 
-import com.mikufans.jwt.modle.dto.PermissionDto;
-import com.mikufans.jwt.modle.dto.RoleDto;
+import com.mikufans.jwt.model.dto.PermissionDto;
+import com.mikufans.jwt.model.dto.RoleDto;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;

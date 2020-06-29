@@ -6,7 +6,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.mikufans.jwt.exception.CustomException;
-import com.mikufans.jwt.modle.common.Constant;
+import com.mikufans.jwt.model.common.Constant;
 import com.mikufans.jwt.util.common.Base64ConvertUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,14 +1,13 @@
 package com.mikufans.jwt.config.shiro;
 
-import com.mikufans.jwt.config.RedisConfig;
 import com.mikufans.jwt.config.shiro.jwt.JwtToken;
 import com.mikufans.jwt.mapper.PermissionMapper;
 import com.mikufans.jwt.mapper.RoleMapper;
 import com.mikufans.jwt.mapper.UserMapper;
-import com.mikufans.jwt.modle.common.Constant;
-import com.mikufans.jwt.modle.dto.PermissionDto;
-import com.mikufans.jwt.modle.dto.RoleDto;
-import com.mikufans.jwt.modle.dto.UserDto;
+import com.mikufans.jwt.model.common.Constant;
+import com.mikufans.jwt.model.dto.PermissionDto;
+import com.mikufans.jwt.model.dto.RoleDto;
+import com.mikufans.jwt.model.dto.UserDto;
 import com.mikufans.jwt.util.JwtUtil;
 import com.mikufans.jwt.util.RedisUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -22,7 +21,6 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import redis.clients.jedis.util.JedisURIHelper;
 
 import java.util.List;
 

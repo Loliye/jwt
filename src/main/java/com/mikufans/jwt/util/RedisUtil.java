@@ -1,15 +1,12 @@
 package com.mikufans.jwt.util;
 
 import com.mikufans.jwt.exception.CustomException;
-import com.mikufans.jwt.modle.common.Constant;
-import org.apache.commons.lang3.SerializationUtils;
-import org.apache.commons.lang3.StringUtils;
+import com.mikufans.jwt.model.common.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-import javax.persistence.SecondaryTable;
 import java.util.Set;
 
 @Component
